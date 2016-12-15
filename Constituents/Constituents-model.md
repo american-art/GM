@@ -53,13 +53,79 @@ return getValue("ConstituentURI")+"/name"
 #### _FirstName_
 From column: _FirstName_
 ``` python
-return getValue("ConstituentURI")+"/first_name"
+return getValue("FirstName")
 ```
 
 #### _FirstNameType_
 From column: _FirstName_
 ``` python
+return "First Name"
+```
+
+#### _MiddleNameType_
+From column: _MiddleName_
+``` python
+return "Middle Name"
+```
+
+#### _LastNameType_
+From column: _LastName_
+``` python
+return "Last Name"
+```
+
+#### _FirstNameURI_
+From column: _AlphasortURI_
+``` python
 return getValue("ConstituentURI")+"/first_name"
+```
+
+#### _MiddleNameURI_
+From column: _FirstNameType_
+``` python
+return getValue("ConstituentURI")+"/middle_name"
+```
+
+#### _LastNameURI_
+From column: _MiddleNameType_
+``` python
+return getValue("ConstituentURI")+"/last_name"
+```
+
+#### _FirstNameTypeURI_
+From column: _FirstName_
+``` python
+return getValue("ConstituentURI")+"/first_name_type"
+```
+
+#### _MiddleNameTypeURI_
+From column: _MiddleName_
+``` python
+return getValue("ConstituentURI")+"/middle_name_type"
+```
+
+#### _LastNameTypeURI_
+From column: _LastName_
+``` python
+return getValue("ConstituentURI")+"/last_name_type"
+```
+
+#### _SuffixURI_
+From column: _LastNameType_
+``` python
+if getValue("Suffix"):
+    return getValue("ConstituentURI")+"/suffix"
+else:
+    return ""
+```
+
+#### _PrefixURI_
+From column: _Suffix_
+``` python
+if getValue("prefix"):
+    return getValue("ConstituentURI")+"/suffix"
+else:
+    return ""
 ```
 
 
@@ -74,9 +140,16 @@ return getValue("ConstituentURI")+"/first_name"
 | _DisplayName_ | `rdf:value` | `crm:E82_Actor_Appellation2`|
 | _DisplayNameURI_ | `uri` | `crm:E82_Actor_Appellation2`|
 | _FirstName_ | `rdf:value` | `crm:E82_Actor_Appellation4`|
-| _FirstNameType_ | `skos:prefLabel` | `crm:E55_Type1`|
+| _FirstNameURI_ | `uri` | `crm:E82_Actor_Appellation4`|
+| _LastName_ | `rdf:value` | `crm:E82_Actor_Appellation6`|
+| _LastNameURI_ | `uri` | `crm:E82_Actor_Appellation6`|
+| _MiddleName_ | `rdf:value` | `crm:E82_Actor_Appellation5`|
+| _MiddleNameURI_ | `uri` | `crm:E82_Actor_Appellation5`|
 | _NameLabel_ | `rdfs:label` | `crm:E39_Actor1`|
 | _NameURI_ | `uri` | `crm:E82_Actor_Appellation3`|
+| _PrefixURI_ | `uri` | `crm:E82_Actor_Appellation8`|
+| _Suffix_ | `rdf:value` | `crm:E82_Actor_Appellation7`|
+| _SuffixURI_ | `uri` | `crm:E82_Actor_Appellation7`|
 
 
 ## Links
@@ -85,8 +158,10 @@ return getValue("ConstituentURI")+"/first_name"
 | `crm:E39_Actor1` | `crm:P1_is_identified_by` | `crm:E82_Actor_Appellation1`|
 | `crm:E39_Actor1` | `crm:P1_is_identified_by` | `crm:E82_Actor_Appellation2`|
 | `crm:E39_Actor1` | `crm:P1_is_identified_by` | `crm:E82_Actor_Appellation3`|
-| `crm:E55_Type1` | `skos:broadMatch` | `xsd:http://vocab.getty.edu/aat/300404651`|
 | `crm:E82_Actor_Appellation1` | `crm:P2_has_type` | `xsd:http://vocab.getty.edu/aat/300404672`|
 | `crm:E82_Actor_Appellation2` | `crm:P2_has_type` | `xsd:http://vocab.getty.edu/aat/300404670`|
 | `crm:E82_Actor_Appellation3` | `crm:P106_is_composed_of` | `crm:E82_Actor_Appellation4`|
-| `crm:E82_Actor_Appellation4` | `crm:P2_has_type` | `crm:E55_Type1`|
+| `crm:E82_Actor_Appellation3` | `crm:P106_is_composed_of` | `crm:E82_Actor_Appellation5`|
+| `crm:E82_Actor_Appellation3` | `crm:P106_is_composed_of` | `crm:E82_Actor_Appellation6`|
+| `crm:E82_Actor_Appellation3` | `crm:P106_is_composed_of` | `crm:E82_Actor_Appellation7`|
+| `crm:E82_Actor_Appellation3` | `crm:P106_is_composed_of` | `crm:E82_Actor_Appellation8`|
