@@ -23,6 +23,16 @@ Literal Type: ``
 <br/>Language: ``
 <br/>isUri: `true`
 
+#### Literal Node: `http://vocab.getty.edu/ulan`
+Literal Type: ``
+<br/>Language: ``
+<br/>isUri: `true`
+
+#### Literal Node: `http://vocab.getty.edu/aat/300080102`
+Literal Type: ``
+<br/>Language: ``
+<br/>isUri: `true`
+
 
 ## PyTransforms
 #### _ConstituentURI_
@@ -178,6 +188,12 @@ From column: _Creator ULAN_
 return getValue("ConstituentURI")+"/gender"
 ```
 
+#### _UlanURI_
+From column: _DisplayOrder_
+``` python
+return "http://vocab.getty.edu/ulan/"+getValue("Creator ULAN")
+```
+
 
 ## Selections
 
@@ -186,17 +202,20 @@ return getValue("ConstituentURI")+"/gender"
 |  ----- | -------- | ----- |
 | _AlphaSort_ | `rdf:value` | `crm:E82_Actor_Appellation1`|
 | _AlphasortURI_ | `uri` | `crm:E82_Actor_Appellation1`|
+| _Biography_ | `rdf:value` | `crm:E33_Linguistic_Object1`|
 | _BiographyURI_ | `uri` | `crm:E33_Linguistic_Object1`|
 | _Birth Date_ | `rdf:value` | `crm:E52_Time-Span1`|
 | _BirthURI_ | `uri` | `crm:E63_Beginning_of_Existence1`|
 | _BirthYearURI_ | `uri` | `crm:E52_Time-Span1`|
 | _ConstituentURI_ | `uri` | `crm:E39_Actor1`|
+| _Death Date_ | `rdf:value` | `crm:E52_Time-Span2`|
 | _DeathURI_ | `uri` | `crm:E64_End_of_Existence1`|
 | _DeathYearURI_ | `uri` | `crm:E52_Time-Span2`|
 | _DisplayName_ | `rdf:value` | `crm:E82_Actor_Appellation2`|
 | _DisplayNameURI_ | `uri` | `crm:E82_Actor_Appellation2`|
 | _FirstName_ | `rdf:value` | `crm:E82_Actor_Appellation4`|
 | _FirstNameURI_ | `uri` | `crm:E82_Actor_Appellation4`|
+| _Gender_ | `rdfs:label` | `crm:E55_Type1`|
 | _GenderURI_ | `uri` | `crm:E55_Type1`|
 | _LastName_ | `rdf:value` | `crm:E82_Actor_Appellation6`|
 | _LastNameURI_ | `uri` | `crm:E82_Actor_Appellation6`|
@@ -204,16 +223,20 @@ return getValue("ConstituentURI")+"/gender"
 | _MiddleNameURI_ | `uri` | `crm:E82_Actor_Appellation5`|
 | _NameLabel_ | `rdfs:label` | `crm:E39_Actor1`|
 | _NameURI_ | `uri` | `crm:E82_Actor_Appellation3`|
+| _Nationality_ | `rdfs:label` | `crm:E74_Group1`|
 | _NationalityURI_ | `uri` | `crm:E74_Group1`|
 | _Prefix_ | `rdf:value` | `crm:E82_Actor_Appellation8`|
 | _PrefixURI_ | `uri` | `crm:E82_Actor_Appellation8`|
 | _Suffix_ | `rdf:value` | `crm:E82_Actor_Appellation7`|
 | _SuffixURI_ | `uri` | `crm:E82_Actor_Appellation7`|
+| _UlanURI_ | `uri` | `skos:Concept1`|
 
 
 ## Links
 | From | Property | To |
 |  --- | -------- | ---|
+| `crm:E33_Linguistic_Object1` | `crm:P2_has_type` | `xsd:http://vocab.getty.edu/aat/300080102`|
+| `crm:E33_Linguistic_Object1` | `crm:P2_has_type` | `xsd:http://vocab.getty.edu/aat/300404670`|
 | `crm:E39_Actor1` | `crm:P129i_is_subject_of` | `crm:E33_Linguistic_Object1`|
 | `crm:E39_Actor1` | `crm:P2_has_type` | `crm:E55_Type1`|
 | `crm:E39_Actor1` | `crm:P92i_was_brought_into_existence_by` | `crm:E63_Beginning_of_Existence1`|
@@ -222,6 +245,7 @@ return getValue("ConstituentURI")+"/gender"
 | `crm:E39_Actor1` | `crm:P1_is_identified_by` | `crm:E82_Actor_Appellation1`|
 | `crm:E39_Actor1` | `crm:P1_is_identified_by` | `crm:E82_Actor_Appellation2`|
 | `crm:E39_Actor1` | `crm:P1_is_identified_by` | `crm:E82_Actor_Appellation3`|
+| `crm:E39_Actor1` | `skos:exactMatch` | `skos:Concept1`|
 | `crm:E63_Beginning_of_Existence1` | `crm:P4_has_time-span` | `crm:E52_Time-Span1`|
 | `crm:E64_End_of_Existence1` | `crm:P4_has_time-span` | `crm:E52_Time-Span2`|
 | `crm:E74_Group1` | `crm:P2_has_type` | `xsd:http://vocab.getty.edu/aat/300379842`|
@@ -232,3 +256,4 @@ return getValue("ConstituentURI")+"/gender"
 | `crm:E82_Actor_Appellation3` | `crm:P106_is_composed_of` | `crm:E82_Actor_Appellation6`|
 | `crm:E82_Actor_Appellation3` | `crm:P106_is_composed_of` | `crm:E82_Actor_Appellation7`|
 | `crm:E82_Actor_Appellation3` | `crm:P106_is_composed_of` | `crm:E82_Actor_Appellation8`|
+| `skos:Concept1` | `skos:inScheme` | `xsd:http://vocab.getty.edu/ulan`|
