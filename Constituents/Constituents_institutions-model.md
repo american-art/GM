@@ -70,7 +70,7 @@ return getValue("ConstituentURI")+"/name"
 #### _BirthURI_
 From column: _Institution_
 ``` python
-if getValue("Birth Date")!=0:
+if getValue("Birth Date")!='0':
     return getValue("ConstituentURI")+"/birth"
 ```
 
@@ -84,7 +84,7 @@ if getValue("Birth Date")!=0:
 #### _DeathURI_
 From column: _Birth Date_
 ``` python
-if getValue("Death Date")!=0:
+if getValue("Death Date")!='0':
     return getValue("ConstituentURI")+"/death"
 else:
     return ""
