@@ -38,7 +38,10 @@ Literal Type: ``
 #### _ConstituentURI_
 From column: _DisplayName_
 ``` python
-return "object/"+SM.fingerprint_string(getValue("DisplayName"))
+if getValue("DisplayName")!="unknown":
+    return "object/"+SM.fingerprint_string(getValue("DisplayName"))
+else:
+    return ""
 ```
 
 #### _NameLabel_
@@ -155,7 +158,10 @@ else:
 #### _BirthURI_
 From column: _Institution_
 ``` python
-return getValue("ConstituentURI")+"/birth"
+if getValue("Birth Date")!='0':
+    return getValue("ConstituentURI")+"/birth"
+else:
+    return ""
 ```
 
 #### _BirthYearURI_
@@ -167,7 +173,10 @@ return getValue("ConstituentURI")+"/birth_year"
 #### _DeathURI_
 From column: _Birth Date_
 ``` python
-return getValue("ConstituentURI")+"/death"
+if getValue("Death Date")!='0':
+    return getValue("ConstituentURI")+"/death"
+else:
+    return ""
 ```
 
 #### _DeathYearURI_
@@ -179,7 +188,10 @@ return getValue("ConstituentURI")+"/death_year"
 #### _NationalityURI_
 From column: _DisplayDate_
 ``` python
-return getValue("ConstituentURI")+"/nationaltiy"
+if getValue("Nationality"):
+    return getValue("ConstituentURI")+"/nationaltiy"
+else:
+    return ""
 ```
 
 #### _GenderURI_
@@ -191,7 +203,10 @@ return getValue("ConstituentURI")+"/gender"
 #### _UlanURI_
 From column: _DisplayOrder_
 ``` python
-return "http://vocab.getty.edu/ulan/"+getValue("Creator ULAN")
+if getValue("Creator ULAN"):
+    return "http://vocab.getty.edu/ulan/"+getValue("Creator ULAN")
+else:
+    return ""
 ```
 
 
@@ -202,20 +217,17 @@ return "http://vocab.getty.edu/ulan/"+getValue("Creator ULAN")
 |  ----- | -------- | ----- |
 | _AlphaSort_ | `rdf:value` | `crm:E82_Actor_Appellation1`|
 | _AlphasortURI_ | `uri` | `crm:E82_Actor_Appellation1`|
-| _Biography_ | `rdf:value` | `crm:E33_Linguistic_Object1`|
 | _BiographyURI_ | `uri` | `crm:E33_Linguistic_Object1`|
 | _Birth Date_ | `rdf:value` | `crm:E52_Time-Span1`|
 | _BirthURI_ | `uri` | `crm:E63_Beginning_of_Existence1`|
 | _BirthYearURI_ | `uri` | `crm:E52_Time-Span1`|
 | _ConstituentURI_ | `uri` | `crm:E39_Actor1`|
-| _Death Date_ | `rdf:value` | `crm:E52_Time-Span2`|
 | _DeathURI_ | `uri` | `crm:E64_End_of_Existence1`|
 | _DeathYearURI_ | `uri` | `crm:E52_Time-Span2`|
 | _DisplayName_ | `rdf:value` | `crm:E82_Actor_Appellation2`|
 | _DisplayNameURI_ | `uri` | `crm:E82_Actor_Appellation2`|
 | _FirstName_ | `rdf:value` | `crm:E82_Actor_Appellation4`|
 | _FirstNameURI_ | `uri` | `crm:E82_Actor_Appellation4`|
-| _Gender_ | `rdfs:label` | `crm:E55_Type1`|
 | _GenderURI_ | `uri` | `crm:E55_Type1`|
 | _LastName_ | `rdf:value` | `crm:E82_Actor_Appellation6`|
 | _LastNameURI_ | `uri` | `crm:E82_Actor_Appellation6`|
@@ -223,7 +235,6 @@ return "http://vocab.getty.edu/ulan/"+getValue("Creator ULAN")
 | _MiddleNameURI_ | `uri` | `crm:E82_Actor_Appellation5`|
 | _NameLabel_ | `rdfs:label` | `crm:E39_Actor1`|
 | _NameURI_ | `uri` | `crm:E82_Actor_Appellation3`|
-| _Nationality_ | `rdfs:label` | `crm:E74_Group1`|
 | _NationalityURI_ | `uri` | `crm:E74_Group1`|
 | _Prefix_ | `rdf:value` | `crm:E82_Actor_Appellation8`|
 | _PrefixURI_ | `uri` | `crm:E82_Actor_Appellation8`|
