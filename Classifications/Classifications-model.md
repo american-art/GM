@@ -31,7 +31,10 @@ return "object/"+getValue("ObjectID")
 #### _TypeURI_
 From column: _ObjectURI_
 ``` python
-return getValue("ObjectURI")+"/classification_type"
+if AATTerm.get_aat_uri("gm",getValue("Classification")):
+    return AATTerm.get_aat_uri("gm",getValue("Classification"))
+else:
+    return UM.uri_from_fields("thesauri/classification/",getValue("Classification"))
 ```
 
 #### _ClassificationEventURI_
