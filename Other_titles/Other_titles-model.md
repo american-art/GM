@@ -16,6 +16,18 @@ From column: _ObjectID_
 return "object/"+getValue("ObjectID")
 ```
 
+#### _TitleURI_
+From column: _ObjectURI_
+``` python
+return UM.uri_from_fields("thesauri/title/",getValue("Title"))
+```
+
+#### _TitleIdentifier_
+From column: _TitleURI_
+``` python
+return getValue("TitleURI")+"/identifier"
+```
+
 
 ## Selections
 #### _DEFAULT_TEST_
@@ -38,7 +50,9 @@ return getValue("TitleType")=="Primary Title"
 |  ----- | -------- | ----- |
 | _ObjectURI_ | `uri` | `crm:E22_Man-Made_Object1`|
 | _Title_ | `rdf:value` | `crm:E35_Title1`|
+| _TitleIdentifier_ | `uri` | `crm:E42_Identifier1`|
 | _TitleType_ | `skos:prefLabel` | `crm:E55_Type1`|
+| _TitleURI_ | `uri` | `crm:E35_Title1`|
 
 
 ## Links
