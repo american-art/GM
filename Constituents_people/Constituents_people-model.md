@@ -33,13 +33,18 @@ Literal Type: ``
 <br/>Language: ``
 <br/>isUri: `true`
 
+#### Literal Node: `http://vocab.getty.edu/aat/300055147`
+Literal Type: ``
+<br/>Language: ``
+<br/>isUri: `true`
+
 
 ## PyTransforms
 #### _ConstituentURI_
 From column: _DisplayName_
 ``` python
 if getValue("DisplayName")!="unknown":
-    return "object/"+SM.fingerprint_string(getValue("DisplayName"))
+    return "constituent/"+SM.fingerprint_string(getValue("DisplayName"))
 else:
     return ""
 ```
@@ -209,6 +214,24 @@ else:
     return ""
 ```
 
+#### _BirthDisplayDate_
+From column: _Birth Date_
+``` python
+return getValue("DisplayDate")
+```
+
+#### _BirthDateEnd_
+From column: _Birth Date_
+``` python
+return getValue("Birth Date")
+```
+
+#### _DeathDateBegin_
+From column: _DisplayDate_
+``` python
+return getValue("Death Date")
+```
+
 
 ## Selections
 
@@ -217,17 +240,24 @@ else:
 |  ----- | -------- | ----- |
 | _AlphaSort_ | `rdf:value` | `crm:E82_Actor_Appellation1`|
 | _AlphasortURI_ | `uri` | `crm:E82_Actor_Appellation1`|
+| _Biography_ | `rdf:value` | `crm:E33_Linguistic_Object1`|
 | _BiographyURI_ | `uri` | `crm:E33_Linguistic_Object1`|
-| _Birth Date_ | `rdf:value` | `crm:E52_Time-Span1`|
+| _Birth Date_ | `crm:P82a_begin_of_the_begin` | `crm:E52_Time-Span1`|
+| _BirthDateEnd_ | `crm:P82b_end_of_the_end` | `crm:E52_Time-Span1`|
+| _BirthDisplayDate_ | `rdfs:label` | `crm:E52_Time-Span1`|
 | _BirthURI_ | `uri` | `crm:E63_Beginning_of_Existence1`|
 | _BirthYearURI_ | `uri` | `crm:E52_Time-Span1`|
 | _ConstituentURI_ | `uri` | `crm:E39_Actor1`|
+| _Death Date_ | `crm:P82b_end_of_the_end` | `crm:E52_Time-Span2`|
+| _DeathDateBegin_ | `crm:P82a_begin_of_the_begin` | `crm:E52_Time-Span2`|
 | _DeathURI_ | `uri` | `crm:E64_End_of_Existence1`|
 | _DeathYearURI_ | `uri` | `crm:E52_Time-Span2`|
+| _DisplayDate_ | `rdfs:label` | `crm:E52_Time-Span2`|
 | _DisplayName_ | `rdf:value` | `crm:E82_Actor_Appellation2`|
 | _DisplayNameURI_ | `uri` | `crm:E82_Actor_Appellation2`|
 | _FirstName_ | `rdf:value` | `crm:E82_Actor_Appellation4`|
 | _FirstNameURI_ | `uri` | `crm:E82_Actor_Appellation4`|
+| _Gender_ | `rdfs:label` | `crm:E55_Type1`|
 | _GenderURI_ | `uri` | `crm:E55_Type1`|
 | _LastName_ | `rdf:value` | `crm:E82_Actor_Appellation6`|
 | _LastNameURI_ | `uri` | `crm:E82_Actor_Appellation6`|
@@ -235,6 +265,7 @@ else:
 | _MiddleNameURI_ | `uri` | `crm:E82_Actor_Appellation5`|
 | _NameLabel_ | `rdfs:label` | `crm:E39_Actor1`|
 | _NameURI_ | `uri` | `crm:E82_Actor_Appellation3`|
+| _Nationality_ | `rdfs:label` | `crm:E74_Group1`|
 | _NationalityURI_ | `uri` | `crm:E74_Group1`|
 | _Prefix_ | `rdf:value` | `crm:E82_Actor_Appellation8`|
 | _PrefixURI_ | `uri` | `crm:E82_Actor_Appellation8`|
@@ -257,6 +288,8 @@ else:
 | `crm:E39_Actor1` | `crm:P1_is_identified_by` | `crm:E82_Actor_Appellation2`|
 | `crm:E39_Actor1` | `crm:P1_is_identified_by` | `crm:E82_Actor_Appellation3`|
 | `crm:E39_Actor1` | `skos:exactMatch` | `skos:Concept1`|
+| `crm:E55_Type1` | `crm:P2_has_type` | `crm:E55_Type2`|
+| `crm:E55_Type2` | `skos:broadMatch` | `xsd:http://vocab.getty.edu/aat/300055147`|
 | `crm:E63_Beginning_of_Existence1` | `crm:P4_has_time-span` | `crm:E52_Time-Span1`|
 | `crm:E64_End_of_Existence1` | `crm:P4_has_time-span` | `crm:E52_Time-Span2`|
 | `crm:E74_Group1` | `crm:P2_has_type` | `xsd:http://vocab.getty.edu/aat/300379842`|
