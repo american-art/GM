@@ -18,6 +18,11 @@ Literal Type: ``
 <br/>Language: ``
 <br/>isUri: `true`
 
+#### Literal Node: `ttp://vocab.getty.edu/aat/300379842`
+Literal Type: ``
+<br/>Language: ``
+<br/>isUri: `true`
+
 
 ## PyTransforms
 #### _ConstituentURI_
@@ -99,6 +104,24 @@ else:
     return ""
 ```
 
+#### _BirthDateEnd_
+From column: _Birth Date_
+``` python
+return getValue("Birth Date")
+```
+
+#### _BirthDisplayDate_
+From column: _BirthDateEnd_
+``` python
+return getValue("DisplayDate")
+```
+
+#### _DeathDateEnd_
+From column: _Death Date_
+``` python
+return getValue("Death Date")
+```
+
 
 ## Selections
 #### _DEFAULT_TEST_
@@ -114,12 +137,17 @@ return getValue("FirstName")!=""
 |  ----- | -------- | ----- |
 | _AlphaSort_ | `rdf:value` | `crm:E82_Actor_Appellation1`|
 | _AlphasortURI_ | `uri` | `crm:E82_Actor_Appellation1`|
-| _Birth Date_ | `rdf:value` | `crm:E52_Time-Span1`|
+| _Birth Date_ | `crm:P82a_begin_of_the_begin` | `crm:E52_Time-Span1`|
+| _BirthDateEnd_ | `crm:P82b_end_of_the_end` | `crm:E52_Time-Span1`|
 | _BirthDateURI_ | `uri` | `crm:E52_Time-Span1`|
+| _BirthDisplayDate_ | `rdfs:label` | `crm:E52_Time-Span1`|
 | _BirthURI_ | `uri` | `crm:E63_Beginning_of_Existence1`|
 | _ConstituentURI_ | `uri` | `crm:E39_Actor1`|
+| _Death Date_ | `crm:P82a_begin_of_the_begin` | `crm:E52_Time-Span2`|
+| _DeathDateEnd_ | `crm:P82b_end_of_the_end` | `crm:E52_Time-Span2`|
 | _DeathDateURI_ | `uri` | `crm:E52_Time-Span2`|
 | _DeathURI_ | `uri` | `crm:E64_End_of_Existence1`|
+| _DisplayDate_ | `rdfs:label` | `crm:E52_Time-Span2`|
 | _DisplayName_ | `rdfs:label` | `crm:E39_Actor1`|
 | _NameURI_ | `uri` | `crm:E82_Actor_Appellation2`|
 | _NameValue_ | `rdf:value` | `crm:E82_Actor_Appellation2`|
@@ -140,6 +168,7 @@ return getValue("FirstName")!=""
 | `crm:E63_Beginning_of_Existence1` | `crm:P4_has_time-span` | `crm:E52_Time-Span1`|
 | `crm:E63_Beginning_of_Existence1` | `crm:P4_has_time-span` | `crm:E52_Time-Span2`|
 | `crm:E64_End_of_Existence1` | `crm:P4_has_time-span` | `crm:E52_Time-Span2`|
+| `crm:E74_Group1` | `crm:P2_has_type` | `xsd:ttp://vocab.getty.edu/aat/300379842`|
 | `crm:E82_Actor_Appellation1` | `crm:P2_has_type` | `xsd:http://vocab.getty.edu/aat/300404672`|
 | `crm:E82_Actor_Appellation2` | `crm:P2_has_type` | `xsd:http://vocab.getty.edu/aat/300404670`|
 | `skos:Concept1` | `skos:inScheme` | `xsd:http://vocab.getty.edu/ulan`|
