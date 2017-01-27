@@ -21,7 +21,7 @@ Literal Type: ``
 #### _ObjectURI_
 From column: _ObjectURI_
 ``` python
-return "object/"+getValue("ObjectURI")
+return "object/"+getValue("ObjectID")
 ```
 
 #### _TitleLabel_
