@@ -30,5 +30,3 @@ return "object/"+getValue("Object ID")
 | From | Property | To |
 |  --- | -------- | ---|
 | `crm:E22_Man-Made_Object1` | `crm:P138i_has_representation` | `crm:E38_Image1`|
-| `crm:E33_Linguistic_Object1` | `crm:P2_has_type` | `xsd:http://vocab.getty.edu/aat/300055547`|
-| `crm:E38_Image1` | `crm:P67i_is_referred_to_by` | `crm:E33_Linguistic_Object1`|
