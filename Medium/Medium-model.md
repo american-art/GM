@@ -31,12 +31,12 @@ return getValue("ObjectURI")+"/medium"
 ## Semantic Types
 | Column | Property | Class |
 |  ----- | -------- | ----- |
-| _Medium_ | `rdfs:label` | `crm:E55_Type1`|
-| _MediumURI_ | `uri` | `crm:E55_Type1`|
+| _Medium_ | `skos:prefLabel` | `crm:E57_Material1`|
+| _MediumURI_ | `uri` | `crm:E57_Material1`|
 | _ObjectURI_ | `uri` | `crm:E22_Man-Made_Object1`|
 
 
 ## Links
 | From | Property | To |
 |  --- | -------- | ---|
-| `crm:E22_Man-Made_Object1` | `crm:P2_has_type` | `crm:E55_Type1`|
+| `crm:E22_Man-Made_Object1` | `crm:P45_consists_of` | `crm:E57_Material1`|
