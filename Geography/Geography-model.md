@@ -1,8 +1,18 @@
-# Geography_1.csv
+# Geography.csv
 
 ## Add Column
 
 ## Add Node/Literal
+#### Literal Node: `http://vocab.getty.edu/aat/300387565`
+Literal Type: ``
+<br/>Language: ``
+<br/>isUri: `true`
+
+#### Literal Node: `http://vocab.getty.edu/aat/300387567`
+Literal Type: ``
+<br/>Language: ``
+<br/>isUri: `true`
+
 
 ## PyTransforms
 #### _ObjectURI_
@@ -26,13 +36,15 @@ return getValue("ObjectURI")+"/creation_location"
 #### _LatURI_
 From column: _LatitudeDirection_
 ``` python
-return getValue("ObjectURI")+"/latitude"
+if getValue("Latitude"):
+    return getValue("ObjectURI")+"/latitude"
 ```
 
 #### _LongURI_
 From column: _LatURI_
 ``` python
-return getValue("ObjectURI")+"/longitude"
+if getValue("Longitude"):
+    return getValue("ObjectURI")+"/longitude"
 ```
 
 #### _Lat_
@@ -84,6 +96,7 @@ else:
 | _ObjectURI_ | `uri` | `crm:E22_Man-Made_Object1`|
 | _PlaceURI_ | `uri` | `crm:E53_Place1`|
 | _ProductionURI_ | `uri` | `crm:E12_Production1`|
+| _Term_ | `rdfs:label` | `crm:E53_Place1`|
 
 
 ## Links
@@ -91,5 +104,7 @@ else:
 |  --- | -------- | ---|
 | `crm:E12_Production1` | `crm:P7_took_place_at` | `crm:E53_Place1`|
 | `crm:E22_Man-Made_Object1` | `crm:P108i_was_produced_by` | `crm:E12_Production1`|
+| `crm:E47_Spatial_Coordinates1` | `crm:P2_has_type` | `xsd:http://vocab.getty.edu/aat/300387565`|
+| `crm:E47_Spatial_Coordinates2` | `crm:P2_has_type` | `xsd:http://vocab.getty.edu/aat/300387567`|
 | `crm:E53_Place1` | `crm:P87_is_identified_by` | `crm:E47_Spatial_Coordinates1`|
 | `crm:E53_Place1` | `crm:P87_is_identified_by` | `crm:E47_Spatial_Coordinates2`|
