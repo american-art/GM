@@ -33,7 +33,7 @@ return getValue("Title")
 #### _TitleURI_
 From column: _ObjectURI_
 ``` python
-return UM.uri_from_fields("thesauri/title",getValue("Title"))
+return UM.uri_from_fields("thesauri/title/",getValue("Title"))
 ```
 
 
