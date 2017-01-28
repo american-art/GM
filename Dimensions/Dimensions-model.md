@@ -31,13 +31,13 @@ return getValue("ObjectURI")+"/"+getValue("Element")
 #### _DimensionURI_
 From column: _Element_
 ``` python
-return getValue("PartURI")+"/dimension/"+getValue("DimensionType").lower()
+return getValue("PartURI")+"/dimension"
 ```
 
 #### _TypeURI_
 From column: _DimensionURI_
 ``` python
-return getValue("DimensionURI")+"/type"
+return getValue("DimensionURI")+"/"+getValue("DimensionType").lower()
 ```
 
 #### _Dimensions_clean_
