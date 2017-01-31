@@ -1,0 +1,39 @@
+#f = open("Objects.csv","r")
+f = open("Objects_clean.csv","r")
+'''count = 0
+for line in f:
+	count += 1
+print(count)'''
+header = f.readline()
+header = header.strip().split(",")
+print(header)
+print(len(header))
+#exit()
+count = 0
+'''for line in f:
+	line1 = line.strip().split(",")
+	if len(line1)!=15:
+		print(line1)
+		print(len(line1))
+		print(line)
+		print(count)
+		#exit()
+		print("---------------------------------------------------------------")
+	count += 1
+	if (count==10):
+		exit()	'''
+temp_l = set()
+for line in f:
+	#print(line)
+	try:
+		line1 = line.strip().split(",")
+		if(len(line1)>5):
+			#print("hello",line1)
+			#break
+			temp = line1[2]
+			temp_l.add(temp)
+	except:
+		print(line)
+
+print(len(temp_l))
+print(temp_l)
