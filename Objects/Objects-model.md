@@ -1,4 +1,4 @@
-# Objects.csv
+# Objects.json
 
 ## Add Column
 
@@ -159,7 +159,7 @@ return getValue("ProductionURI")+"/timespan"
 | _CopyrightURI_ | `uri` | `crm:E30_Right1`|
 | _CreditLine_ | `rdf:value` | `crm:E33_Linguistic_Object2`|
 | _CreditURI_ | `uri` | `crm:E33_Linguistic_Object2`|
-| _Culture_ | `rdf:value` | `crm:E55_Type2`|
+| _Culture_ | `rdfs:label` | `crm:E55_Type2`|
 | _CultureTypeURI_ | `uri` | `crm:E17_Type_Assignment2`|
 | _CultureURI_ | `uri` | `crm:E55_Type2`|
 | _DateBegin_ | `crm:P82a_begin_of_the_begin` | `crm:E52_Time-Span1`|
