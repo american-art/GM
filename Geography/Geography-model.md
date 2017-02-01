@@ -85,6 +85,13 @@ else:
 
 
 ## Selections
+#### _DEFAULT_TEST_
+From column: _Term_
+<br>Operation: `Union`
+``` python
+return getValue("ThesXrefType")!="Place Made"
+```
+
 
 ## Semantic Types
 | Column | Property | Class |
