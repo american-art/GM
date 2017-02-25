@@ -25,19 +25,22 @@ return getValue("ObjectURI")+"/dimension_string"
 #### _PartURI_
 From column: _DimensionStringURI_
 ``` python
-return getValue("ObjectURI")+"/"+getValue("Element")
+return getValue("ObjectURI")+"/"+getValue("Element").lower()
 ```
 
 #### _DimensionURI_
 From column: _Element_
 ``` python
-return getValue("PartURI")+"/dimension"
+if getValue("Dimension")!="0.0":
+    return getValue("PartURI")+"/dimension/"+getValue("Rank")
+else:
+    return ""
 ```
 
 #### _TypeURI_
 From column: _DimensionURI_
 ``` python
-return getValue("DimensionURI")+"/"+getValue("DimensionType").lower()
+return "thesauri/dimension_type/"+getValue("DimensionType").lower()
 ```
 
 #### _Dimensions_clean_
@@ -52,16 +55,13 @@ return ' '.join(getValue("Dimensions").split("\n"))
 ## Semantic Types
 | Column | Property | Class |
 |  ----- | -------- | ----- |
-| _Dimension_ | `rdf:value` | `crm:E54_Dimension1`|
 | _DimensionStringURI_ | `uri` | `crm:E33_Linguistic_Object1`|
-| _DimensionType_ | `skos:prefLabel` | `crm:E55_Type1`|
 | _DimensionURI_ | `uri` | `crm:E54_Dimension1`|
 | _Dimensions_clean_ | `rdf:value` | `crm:E33_Linguistic_Object1`|
 | _Element_ | `rdfs:label` | `crm:E18_Physical_Thing1`|
 | _ObjectURI_ | `uri` | `crm:E22_Man-Made_Object1`|
 | _PartURI_ | `uri` | `crm:E18_Physical_Thing1`|
 | _TypeURI_ | `uri` | `crm:E55_Type1`|
-| _UnitLabel_ | `crm:P91_has_unit` | `crm:E54_Dimension1`|
 
 
 ## Links
