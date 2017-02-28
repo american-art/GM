@@ -41,7 +41,7 @@ return getValue("DisplayName")
 From column: _DisplayOrder_
 ``` python
 if getValue("Creator ULAN"):
-    return "https://vocab.getty.edu/ulan/"+getValue("Creator ULAN")
+    return "http://vocab.getty.edu/ulan/"+getValue("Creator ULAN")
 ```
 
 #### _InstitutionNationality_
