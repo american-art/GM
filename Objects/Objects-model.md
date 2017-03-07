@@ -33,6 +33,11 @@ Literal Type: ``
 <br/>Language: ``
 <br/>isUri: `true`
 
+#### Literal Node: `http://vocab.getty.edu/ulan/500311847`
+Literal Type: ``
+<br/>Language: ``
+<br/>isUri: `true`
+
 
 ## PyTransforms
 #### _ObjectURI_
@@ -149,6 +154,18 @@ From column: _ProductionURI_
 return getValue("ProductionURI")+"/timespan"
 ```
 
+#### _OwnerURI_
+From column: _URL_
+``` python
+return "https://gilcrease.org/"
+```
+
+#### _OwnerLabel_
+From column: _OwnerURI_
+``` python
+return "Gilcrease Museum"
+```
+
 
 ## Selections
 
@@ -178,6 +195,8 @@ return getValue("ProductionURI")+"/timespan"
 | _ObjectURI_ | `uri` | `crm:E22_Man-Made_Object1`|
 | _ObjectURL_ | `uri` | `foaf:Document1`|
 | _ObjectURLLabel_ | `rdfs:label` | `foaf:Document1`|
+| _OwnerLabel_ | `rdfs:label` | `crm:E40_Legal_Body1`|
+| _OwnerURI_ | `uri` | `crm:E40_Legal_Body1`|
 | _ProductionURI_ | `uri` | `crm:E12_Production1`|
 | _TimespanURI_ | `uri` | `crm:E52_Time-Span1`|
 | _TypeAssignmentURI_ | `uri` | `crm:E17_Type_Assignment1`|
@@ -199,10 +218,12 @@ return getValue("ProductionURI")+"/timespan"
 | `crm:E22_Man-Made_Object1` | `crm:P104_is_subject_to` | `crm:E30_Right1`|
 | `crm:E22_Man-Made_Object1` | `crm:P129i_is_subject_of` | `crm:E33_Linguistic_Object1`|
 | `crm:E22_Man-Made_Object1` | `crm:P67i_is_referred_to_by` | `crm:E33_Linguistic_Object2`|
+| `crm:E22_Man-Made_Object1` | `crm:P52_has_current_owner` | `crm:E40_Legal_Body1`|
 | `crm:E22_Man-Made_Object1` | `crm:P1_is_identified_by` | `crm:E42_Identifier1`|
 | `crm:E22_Man-Made_Object1` | `foaf:homepage` | `foaf:Document1`|
 | `crm:E22_Man-Made_Object1` | `crm:P2_has_type` | `crm:E55_Type1`|
 | `crm:E33_Linguistic_Object1` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300080091`|
 | `crm:E33_Linguistic_Object1` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300404670`|
 | `crm:E33_Linguistic_Object2` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300026687`|
+| `crm:E40_Legal_Body1` | `skos:exactMatch` | `http://vocab.getty.edu/ulan/500311847`|
 | `crm:E74_Group1` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300263534`|
