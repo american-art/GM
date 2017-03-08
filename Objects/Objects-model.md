@@ -157,7 +157,7 @@ return getValue("ProductionURI")+"/timespan"
 #### _OwnerURI_
 From column: _URL_
 ``` python
-return "https://gilcrease.org/"
+return "http://data.americanartcollaborative.org/GM"
 ```
 
 #### _OwnerLabel_
