@@ -1,4 +1,4 @@
-# Dimensions.csv
+# Dimensions.json
 
 ## Add Column
 
@@ -55,6 +55,7 @@ return ' '.join(getValue("Dimensions").split("\n"))
 ## Semantic Types
 | Column | Property | Class |
 |  ----- | -------- | ----- |
+| _Dimension_ | `rdf:value` | `crm:E54_Dimension1`|
 | _DimensionStringURI_ | `uri` | `crm:E33_Linguistic_Object1`|
 | _DimensionType_ | `skos:prefLabel` | `crm:E55_Type1`|
 | _DimensionURI_ | `uri` | `crm:E54_Dimension1`|
