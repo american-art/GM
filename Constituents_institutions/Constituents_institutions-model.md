@@ -18,7 +18,7 @@ Literal Type: ``
 <br/>Language: ``
 <br/>isUri: `true`
 
-#### Literal Node: `ttp://vocab.getty.edu/aat/300379842`
+#### Literal Node: `http://vocab.getty.edu/aat/300379842`
 Literal Type: ``
 <br/>Language: ``
 <br/>isUri: `true`
@@ -169,7 +169,6 @@ return getValue("FirstName")!=""
 | `crm:E63_Beginning_of_Existence1` | `crm:P4_has_time-span` | `crm:E52_Time-Span1`|
 | `crm:E63_Beginning_of_Existence1` | `crm:P4_has_time-span` | `crm:E52_Time-Span2`|
 | `crm:E64_End_of_Existence1` | `crm:P4_has_time-span` | `crm:E52_Time-Span2`|
-| `crm:E74_Group1` | `crm:P2_has_type` | `ttp://vocab.getty.edu/aat/300379842`|
 | `crm:E82_Actor_Appellation1` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300404672`|
 | `crm:E82_Actor_Appellation2` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300404670`|
 | `skos:Concept1` | `skos:inScheme` | `http://vocab.getty.edu/ulan`|
