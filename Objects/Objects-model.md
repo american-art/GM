@@ -38,6 +38,11 @@ Literal Type: ``
 <br/>Language: ``
 <br/>isUri: `true`
 
+#### Literal Node: `http://vocab.getty.edu/aat/300404621`
+Literal Type: ``
+<br/>Language: ``
+<br/>isUri: `true`
+
 
 ## PyTransforms
 #### _ObjectURI_
@@ -166,6 +171,18 @@ From column: _OwnerURI_
 return "Gilcrease Museum"
 ```
 
+#### _ObjectIdLabel_
+From column: _ObjectID_
+``` python
+return getValue("ObjectID")
+```
+
+#### _ObjectIdURI_
+From column: _ObjectNameURI_
+``` python
+return getValue("ObjectURI")+"/pref_id"
+```
+
 
 ## Selections
 
@@ -187,7 +204,9 @@ return "Gilcrease Museum"
 | _DepartmentURI_ | `uri` | `crm:E19_Physical_Object1`|
 | _Description_ | `rdf:value` | `crm:E33_Linguistic_Object1`|
 | _DescriptionURI_ | `uri` | `crm:E33_Linguistic_Object1`|
-| _Object Number_ | `rdfs:label` | `crm:E42_Identifier1`|
+| _ObjectID_ | `rdf:value` | `crm:E42_Identifier2`|
+| _ObjectIdLabel_ | `rdfs:label` | `crm:E42_Identifier2`|
+| _ObjectIdURI_ | `uri` | `crm:E42_Identifier2`|
 | _ObjectName_ | `rdfs:label` | `crm:E55_Type1`|
 | _ObjectNameURI_ | `uri` | `crm:E55_Type1`|
 | _ObjectNumberURI_ | `uri` | `crm:E42_Identifier1`|
@@ -220,10 +239,13 @@ return "Gilcrease Museum"
 | `crm:E22_Man-Made_Object1` | `crm:P67i_is_referred_to_by` | `crm:E33_Linguistic_Object2`|
 | `crm:E22_Man-Made_Object1` | `crm:P52_has_current_owner` | `crm:E40_Legal_Body1`|
 | `crm:E22_Man-Made_Object1` | `crm:P1_is_identified_by` | `crm:E42_Identifier1`|
+| `crm:E22_Man-Made_Object1` | `crm:P1_is_identified_by` | `crm:E42_Identifier2`|
 | `crm:E22_Man-Made_Object1` | `foaf:homepage` | `foaf:Document1`|
 | `crm:E22_Man-Made_Object1` | `crm:P2_has_type` | `crm:E55_Type1`|
 | `crm:E33_Linguistic_Object1` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300080091`|
 | `crm:E33_Linguistic_Object1` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300404670`|
 | `crm:E33_Linguistic_Object2` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300026687`|
 | `crm:E40_Legal_Body1` | `skos:exactMatch` | `http://vocab.getty.edu/ulan/500311847`|
+| `crm:E42_Identifier1` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300404621`|
+| `crm:E42_Identifier2` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300404670`|
 | `crm:E74_Group1` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300263534`|
