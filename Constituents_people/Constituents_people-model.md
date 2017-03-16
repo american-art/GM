@@ -280,8 +280,8 @@ else:
 | _AlphasortURI_ | `uri` | `crm:E82_Actor_Appellation1`|
 | _Biography_ | `rdf:value` | `crm:E33_Linguistic_Object1`|
 | _BiographyURI_ | `uri` | `crm:E33_Linguistic_Object1`|
-| _Birth Date_ | `rdf:value` | `crm:E52_Time-Span2`|
 | _Birth Date_ | `crm:P82a_begin_of_the_begin` | `crm:E52_Time-Span1`|
+| _Birth Date_ | `rdf:value` | `crm:E52_Time-Span2`|
 | _BirthDateEnd_ | `crm:P82b_end_of_the_end` | `crm:E52_Time-Span1`|
 | _BirthDisplayDate_ | `rdfs:label` | `crm:E52_Time-Span1`|
 | _BirthURI_ | `uri` | `crm:E63_Beginning_of_Existence1`|
@@ -334,13 +334,15 @@ else:
 | `crm:E39_Actor1` | `skos:exactMatch` | `skos:Concept1`|
 | `crm:E55_Type1` | `crm:P2_has_type` | `crm:E55_Type2`|
 | `crm:E55_Type2` | `skos:broadMatch` | `http://vocab.getty.edu/aat/300055147`|
-| `crm:E55_Type3` | `skos:broadMatch` | `http://vocab.getty.edu/aat/300404845`|
+| `crm:E55_Type3` | `skos:broadMatch` | `http://vocab.getty.edu/aat/300404651`|
 | `crm:E55_Type4` | `skos:broadMatch` | `http://vocab.getty.edu/aat/300404654`|
+| `crm:E55_Type5` | `skos:broadMatch` | `http://vocab.getty.edu/aat/300404652`|
 | `crm:E55_Type6` | `skos:broadMatch` | `http://vocab.getty.edu/aat/300404662`|
 | `crm:E63_Beginning_of_Existence1` | `crm:P4_has_time-span` | `crm:E52_Time-Span1`|
 | `crm:E64_End_of_Existence1` | `crm:P4_has_time-span` | `crm:E52_Time-Span2`|
 | `crm:E74_Group1` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300379842`|
 | `crm:E82_Actor_Appellation1` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300404672`|
+| `crm:E82_Actor_Appellation2` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300404670`|
 | `crm:E82_Actor_Appellation3` | `crm:P106_is_composed_of` | `crm:E82_Actor_Appellation4`|
 | `crm:E82_Actor_Appellation3` | `crm:P106_is_composed_of` | `crm:E82_Actor_Appellation5`|
 | `crm:E82_Actor_Appellation3` | `crm:P106_is_composed_of` | `crm:E82_Actor_Appellation6`|
