@@ -31,7 +31,7 @@ return getValue("ObjectURI")+"/"+getValue("Element").lower()
 #### _DimensionURI_
 From column: _Element_
 ``` python
-if getValue("Dimension")!="0.0":
+if getValue("Dimension")!="0.00":
     return getValue("PartURI")+"/dimension/"+getValue("Rank")
 else:
     return ""
