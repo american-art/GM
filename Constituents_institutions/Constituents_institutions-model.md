@@ -28,7 +28,10 @@ Literal Type: ``
 #### _ConstituentURI_
 From column: _AlphaSort_
 ``` python
-return "constituent/"+SM.fingerprint_string(getValue("DisplayName"))
+if getValue("DisplayName")!="Unknown":
+    return "constituent/"+SM.fingerprint_string(getValue("DisplayName"))
+else:
+    return ""
 ```
 
 #### _NameValue_
@@ -122,6 +125,18 @@ From column: _Death Date_
 return getValue("Death Date")
 ```
 
+#### _DeathLabel_
+From column: _Death Date_
+``` python
+return getValue("Death Date")
+```
+
+#### _BirthLabel_
+From column: _Birth Date_
+``` python
+return getValue("Birth Date")
+```
+
 
 ## Selections
 #### _DEFAULT_TEST_
@@ -140,14 +155,14 @@ return getValue("FirstName")!=""
 | _Birth Date_ | `crm:P82a_begin_of_the_begin` | `crm:E52_Time-Span1`|
 | _BirthDateEnd_ | `crm:P82b_end_of_the_end` | `crm:E52_Time-Span1`|
 | _BirthDateURI_ | `uri` | `crm:E52_Time-Span1`|
-| _BirthDisplayDate_ | `rdfs:label` | `crm:E52_Time-Span1`|
+| _BirthLabel_ | `rdfs:label` | `crm:E52_Time-Span1`|
 | _BirthURI_ | `uri` | `crm:E63_Beginning_of_Existence1`|
 | _ConstituentURI_ | `uri` | `crm:E39_Actor1`|
 | _Death Date_ | `crm:P82a_begin_of_the_begin` | `crm:E52_Time-Span2`|
 | _DeathDateEnd_ | `crm:P82b_end_of_the_end` | `crm:E52_Time-Span2`|
 | _DeathDateURI_ | `uri` | `crm:E52_Time-Span2`|
+| _DeathLabel_ | `rdfs:label` | `crm:E52_Time-Span2`|
 | _DeathURI_ | `uri` | `crm:E64_End_of_Existence1`|
-| _DisplayDate_ | `rdfs:label` | `crm:E52_Time-Span2`|
 | _DisplayName_ | `rdfs:label` | `crm:E39_Actor1`|
 | _DisplayName_ | `rdf:value` | `crm:E18_Physical_Thing1`|
 | _NameURI_ | `uri` | `crm:E82_Actor_Appellation2`|
