@@ -64,6 +64,7 @@ return ' '.join(getValue("Dimensions").split("\n"))
 | _ObjectURI_ | `uri` | `crm:E22_Man-Made_Object1`|
 | _PartURI_ | `uri` | `crm:E18_Physical_Thing1`|
 | _TypeURI_ | `uri` | `crm:E55_Type1`|
+| _UnitLabel_ | `crm:P91_has_unit` | `crm:E54_Dimension1`|
 
 
 ## Links
