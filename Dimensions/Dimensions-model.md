@@ -32,7 +32,7 @@ return getValue("ObjectURI")+"/"+getValue("Element").lower()
 From column: _Element_
 ``` python
 if getValue("Dimension")!="0.00":
-    return getValue("PartURI")+"/dimension/"+getValue("Rank")
+    return getValue("PartURI")+"/dimension/"+getValue("DimensionType").lower()
 else:
     return ""
 ```
@@ -47,6 +47,18 @@ return "thesauri/dimension_type/"+getValue("DimensionType").lower()
 From column: _Dimensions_
 ``` python
 return ' '.join(getValue("Dimensions").split("\n"))
+```
+
+#### _UnitLabel_
+From column: _UnitLabel_
+``` python
+return getValue("UnitLabel")
+```
+
+#### _UnitURI_
+From column: _UnitLabel_
+``` python
+return UM.uri_from_fields("thesauri/dimension_type/")+getValue("UnitLabel").strip()
 ```
 
 
@@ -64,7 +76,8 @@ return ' '.join(getValue("Dimensions").split("\n"))
 | _ObjectURI_ | `uri` | `crm:E22_Man-Made_Object1`|
 | _PartURI_ | `uri` | `crm:E18_Physical_Thing1`|
 | _TypeURI_ | `uri` | `crm:E55_Type1`|
-| _UnitLabel_ | `crm:P91_has_unit` | `crm:E54_Dimension1`|
+| _UnitLabel_ | `skos:prefLabel` | `crm:E58_Measurement_Unit1`|
+| _UnitURI_ | `uri` | `crm:E58_Measurement_Unit1`|
 
 
 ## Links
@@ -75,3 +88,4 @@ return ' '.join(getValue("Dimensions").split("\n"))
 | `crm:E22_Man-Made_Object1` | `crm:P67i_is_referred_to_by` | `crm:E33_Linguistic_Object1`|
 | `crm:E33_Linguistic_Object1` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300266036`|
 | `crm:E54_Dimension1` | `crm:P2_has_type` | `crm:E55_Type1`|
+| `crm:E54_Dimension1` | `crm:P91_has_unit` | `crm:E58_Measurement_Unit1`|
