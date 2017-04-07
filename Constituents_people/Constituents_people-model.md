@@ -1,4 +1,4 @@
-# Constituents.csv
+# Constituents.json
 
 ## Add Column
 
@@ -280,8 +280,8 @@ else:
 | _AlphasortURI_ | `uri` | `crm:E82_Actor_Appellation1`|
 | _Biography_ | `rdf:value` | `crm:E33_Linguistic_Object1`|
 | _BiographyURI_ | `uri` | `crm:E33_Linguistic_Object1`|
-| _Birth Date_ | `crm:P82a_begin_of_the_begin` | `crm:E52_Time-Span1`|
 | _Birth Date_ | `rdf:value` | `crm:E52_Time-Span2`|
+| _Birth Date_ | `crm:P82a_begin_of_the_begin` | `crm:E52_Time-Span1`|
 | _BirthDateEnd_ | `crm:P82b_end_of_the_end` | `crm:E52_Time-Span1`|
 | _BirthDisplayDate_ | `rdfs:label` | `crm:E52_Time-Span1`|
 | _BirthURI_ | `uri` | `crm:E63_Beginning_of_Existence1`|
