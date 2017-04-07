@@ -1,4 +1,4 @@
-# Objects.json
+# Objects.csv
 
 ## Add Column
 
@@ -183,6 +183,30 @@ From column: _ObjectNameURI_
 return getValue("ObjectURI")+"/pref_id"
 ```
 
+#### _DateBeginClean_
+From column: _DateBegin_
+``` python
+return getValue("DateBegin") + "-01-01"
+```
+
+#### _DateEndClean_
+From column: _DateEnd_
+``` python
+return getValue("DateEnd") + "-12-31"
+```
+
+#### _DateLabel_
+From column: _Dated_
+``` python
+return getValue("DateBeginClean") + " to " + getValue("DateEndClean")
+```
+
+#### _Culture_Clean_
+From column: _Culture_
+``` python
+return getValue("Culture").strip().lower()
+```
+
 
 ## Selections
 
@@ -193,12 +217,12 @@ return getValue("ObjectURI")+"/pref_id"
 | _CopyrightURI_ | `uri` | `crm:E30_Right1`|
 | _CreditLine_ | `rdf:value` | `crm:E33_Linguistic_Object2`|
 | _CreditURI_ | `uri` | `crm:E33_Linguistic_Object2`|
-| _Culture_ | `rdfs:label` | `crm:E55_Type2`|
 | _CultureTypeURI_ | `uri` | `crm:E17_Type_Assignment2`|
 | _CultureURI_ | `uri` | `crm:E55_Type2`|
-| _DateBegin_ | `crm:P82a_begin_of_the_begin` | `crm:E52_Time-Span1`|
-| _DateEnd_ | `crm:P82b_end_of_the_end` | `crm:E52_Time-Span1`|
-| _Dated_ | `rdfs:label` | `crm:E52_Time-Span1`|
+| _Culture_Clean_ | `rdfs:label` | `crm:E55_Type2`|
+| _DateBeginClean_ | `crm:P82a_begin_of_the_begin` | `crm:E52_Time-Span1`|
+| _DateEndClean_ | `crm:P82b_end_of_the_end` | `crm:E52_Time-Span1`|
+| _DateLabel_ | `rdfs:label` | `crm:E52_Time-Span1`|
 | _Department_ | `rdfs:label` | `crm:E74_Group1`|
 | _DepartmentGroupURI_ | `uri` | `crm:E74_Group1`|
 | _DepartmentURI_ | `uri` | `crm:E19_Physical_Object1`|
