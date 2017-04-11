@@ -77,7 +77,7 @@ From column: _DateBegin_
 if getValue("DateBegin") == '0':
     return ""
 else:
-    return getValue("DateBegin")
+    return getValue("DateBegin")+"-01-01"
 ```
 
 #### _DateEndValid_
@@ -86,7 +86,7 @@ From column: _DateEnd_
 if getValue("DateEnd") == '0':
     return ""
 else:
-    return getValue("DateEnd")
+    return getValue("DateEnd")+"-12-31"
 ```
 
 #### _MarkingsURI_
@@ -179,6 +179,12 @@ From column: _ObjectNumber_
 return getValue("ObjectURI")+"/obj_no"
 ```
 
+#### _DateLabel_
+From column: _Dated_
+``` python
+return getValue("DateBeginValid") + " to " + getValue("DateEndValid")
+```
+
 
 ## Selections
 
@@ -191,7 +197,7 @@ return getValue("ObjectURI")+"/obj_no"
 | _CreditLineURI_ | `uri` | `crm:E33_Linguistic_Object5`|
 | _DateBeginValid_ | `crm:P82a_begin_of_the_begin` | `crm:E52_Time-Span1`|
 | _DateEndValid_ | `crm:P82b_end_of_the_end` | `crm:E52_Time-Span1`|
-| _Dated_ | `rdfs:label` | `crm:E52_Time-Span1`|
+| _DateLabel_ | `rdfs:label` | `crm:E52_Time-Span1`|
 | _DimensionURI_ | `uri` | `crm:E33_Linguistic_Object4`|
 | _Dimensions_ | `rdf:value` | `crm:E33_Linguistic_Object4`|
 | _Medium_ | `rdf:value` | `crm:E33_Linguistic_Object3`|
