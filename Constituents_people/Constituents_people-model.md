@@ -192,7 +192,10 @@ else:
 #### _BirthYearURI_
 From column: _BirthURI_
 ``` python
-return getValue("ConstituentURI")+"/birth_year"
+if getValue("Birth Date")!='0':
+    return getValue("ConstituentURI")+"/birth_year"
+else:
+    return ""
 ```
 
 #### _DeathURI_
@@ -207,7 +210,10 @@ else:
 #### _DeathYearURI_
 From column: _DeathURI_
 ``` python
-return getValue("ConstituentURI")+"/death_year"
+if getValue("Death Date")!='0':
+    return getValue("ConstituentURI")+"/death_year"
+else:
+    return ""
 ```
 
 #### _NationalityURI_
@@ -222,7 +228,10 @@ else:
 #### _GenderURI_
 From column: _Creator ULAN_
 ``` python
-return getValue("ConstituentURI")+"/gender"
+if getValue("Gender"):
+    return UM.uri_from_fields("thesauri/gender/",getValue("Gender"))
+else:
+    return ""
 ```
 
 #### _UlanURI_
@@ -243,13 +252,13 @@ return getValue("DisplayDate")
 #### _BirthDateEnd_
 From column: _Birth Date_
 ``` python
-return getValue("Birth Date")
+return getValue("Birth Date")+"-12-31"
 ```
 
 #### _DeathDateBegin_
 From column: _DisplayDate_
 ``` python
-return getValue("Death Date")
+return getValue("Death Date")+"-01-01"
 ```
 
 #### _SuffixTypeURI_
@@ -270,6 +279,27 @@ else:
     return ""
 ```
 
+#### _GenderTypeURI_
+From column: _GenderURI_
+``` python
+if getValue("Gender"):
+    return "thesauri/gender_type"
+else:
+    return ""
+```
+
+#### _BirthDateBegin_
+From column: _Birth Date_
+``` python
+return getValue("Birth Date")+"-01-01"
+```
+
+#### _DeathDateEnd_
+From column: _Death Date_
+``` python
+return getValue("Death Date")+"-12-31"
+```
+
 
 ## Selections
 
@@ -280,24 +310,24 @@ else:
 | _AlphasortURI_ | `uri` | `crm:E82_Actor_Appellation1`|
 | _Biography_ | `rdf:value` | `crm:E33_Linguistic_Object1`|
 | _BiographyURI_ | `uri` | `crm:E33_Linguistic_Object1`|
-| _Birth Date_ | `rdf:value` | `crm:E52_Time-Span2`|
-| _Birth Date_ | `crm:P82a_begin_of_the_begin` | `crm:E52_Time-Span1`|
+| _Birth Date_ | `rdfs:label` | `crm:E52_Time-Span1`|
+| _BirthDateBegin_ | `crm:P82a_begin_of_the_begin` | `crm:E52_Time-Span1`|
 | _BirthDateEnd_ | `crm:P82b_end_of_the_end` | `crm:E52_Time-Span1`|
-| _BirthDisplayDate_ | `rdfs:label` | `crm:E52_Time-Span1`|
 | _BirthURI_ | `uri` | `crm:E63_Beginning_of_Existence1`|
 | _BirthYearURI_ | `uri` | `crm:E52_Time-Span1`|
 | _ConstituentURI_ | `uri` | `crm:E39_Actor1`|
-| _Death Date_ | `crm:P82b_end_of_the_end` | `crm:E52_Time-Span2`|
+| _Death Date_ | `rdfs:label` | `crm:E52_Time-Span2`|
 | _DeathDateBegin_ | `crm:P82a_begin_of_the_begin` | `crm:E52_Time-Span2`|
+| _DeathDateEnd_ | `crm:P82b_end_of_the_end` | `crm:E52_Time-Span2`|
 | _DeathURI_ | `uri` | `crm:E64_End_of_Existence1`|
 | _DeathYearURI_ | `uri` | `crm:E52_Time-Span2`|
-| _DisplayDate_ | `rdfs:label` | `crm:E52_Time-Span2`|
 | _DisplayName_ | `rdf:value` | `crm:E82_Actor_Appellation2`|
 | _DisplayNameURI_ | `uri` | `crm:E82_Actor_Appellation2`|
 | _FirstName_ | `rdf:value` | `crm:E82_Actor_Appellation4`|
 | _FirstNameTypeURI_ | `uri` | `crm:E55_Type3`|
 | _FirstNameURI_ | `uri` | `crm:E82_Actor_Appellation4`|
 | _Gender_ | `rdfs:label` | `crm:E55_Type1`|
+| _GenderTypeURI_ | `uri` | `crm:E55_Type2`|
 | _GenderURI_ | `uri` | `crm:E55_Type1`|
 | _LastName_ | `rdf:value` | `crm:E82_Actor_Appellation6`|
 | _LastNameTypeURI_ | `uri` | `crm:E55_Type5`|
@@ -338,6 +368,7 @@ else:
 | `crm:E55_Type4` | `skos:broadMatch` | `http://vocab.getty.edu/aat/300404654`|
 | `crm:E55_Type5` | `skos:broadMatch` | `http://vocab.getty.edu/aat/300404652`|
 | `crm:E55_Type6` | `skos:broadMatch` | `http://vocab.getty.edu/aat/300404662`|
+| `crm:E55_Type7` | `skos:broadMatch` | `http://vocab.getty.edu/aat/300404845`|
 | `crm:E63_Beginning_of_Existence1` | `crm:P4_has_time-span` | `crm:E52_Time-Span1`|
 | `crm:E64_End_of_Existence1` | `crm:P4_has_time-span` | `crm:E52_Time-Span2`|
 | `crm:E74_Group1` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300379842`|
