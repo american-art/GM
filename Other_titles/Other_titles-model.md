@@ -3,11 +3,6 @@
 ## Add Column
 
 ## Add Node/Literal
-#### Literal Node: `http://vocab.getty.edu/aat/300404012`
-Literal Type: ``
-<br/>Language: ``
-<br/>isUri: `true`
-
 
 ## PyTransforms
 #### _ObjectURI_
@@ -19,13 +14,19 @@ return "object/"+getValue("ObjectID")
 #### _TitleURI_
 From column: _ObjectURI_
 ``` python
-return UM.uri_from_fields("thesauri/title/",getValue("Title"))
+return UM.uri_from_fields(getValue("ObjectURI")+"/title/",getValue("Title"))
 ```
 
 #### _TitleIdentifier_
 From column: _TitleURI_
 ``` python
 return getValue("TitleURI")+"/identifier"
+```
+
+#### _TitleTypeURI_
+From column: _DisplayOrder_
+``` python
+return getValue("TitleURI")+"/title_type"
 ```
 
 
@@ -50,8 +51,8 @@ return getValue("TitleType")=="Primary Title"
 |  ----- | -------- | ----- |
 | _ObjectURI_ | `uri` | `crm:E22_Man-Made_Object1`|
 | _Title_ | `rdf:value` | `crm:E35_Title1`|
-| _TitleIdentifier_ | `uri` | `crm:E42_Identifier1`|
 | _TitleType_ | `skos:prefLabel` | `crm:E55_Type1`|
+| _TitleTypeURI_ | `uri` | `crm:E55_Type1`|
 | _TitleURI_ | `uri` | `crm:E35_Title1`|
 
 
@@ -59,6 +60,4 @@ return getValue("TitleType")=="Primary Title"
 | From | Property | To |
 |  --- | -------- | ---|
 | `crm:E22_Man-Made_Object1` | `crm:P102_has_title` | `crm:E35_Title1`|
-| `crm:E35_Title1` | `crm:P1_is_identified_by` | `crm:E42_Identifier1`|
 | `crm:E35_Title1` | `crm:P2_has_type` | `crm:E55_Type1`|
-| `crm:E42_Identifier1` | `crm:P2_has_type` | `xsd:http://vocab.getty.edu/aat/300404012`|
