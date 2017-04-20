@@ -33,7 +33,7 @@ return getValue("Title")
 #### _TitleURI_
 From column: _ObjectURI_
 ``` python
-return UM.uri_from_fields("thesauri/title/",getValue("Title"))
+return UM.uri_from_fields(getValue("ObjectURI")+"/title/",getValue("Title"))
 ```
 
 
@@ -59,4 +59,4 @@ return getValue("TitleType")!="Primary Title"
 | From | Property | To |
 |  --- | -------- | ---|
 | `crm:E22_Man-Made_Object1` | `crm:P102_has_title` | `crm:E35_Title1`|
-| `crm:E35_Title1` | `crm:P2_has_type` | `xsd:http://vocab.getty.edu/aat/300404670`|
+| `crm:E35_Title1` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300404670`|
