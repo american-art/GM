@@ -222,7 +222,7 @@ return getValue("DateBeginClean") + " to " + getValue("DateEndClean")
 #### _Culture_Clean_
 From column: _Culture_
 ``` python
-return getValue("Culture").strip().lower()
+return getValue("Culture").strip().lower().capitalize()
 ```
 
 
