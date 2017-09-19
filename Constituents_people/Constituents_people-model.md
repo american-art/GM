@@ -63,7 +63,7 @@ Literal Type: ``
 #### _ConstituentURI_
 From column: _DisplayName_
 ``` python
-if getValue("DisplayName")!="unknown":
+if getValue("DisplayName")!="unknown" and getValue("Institution")=="":
     return "constituent/"+SM.fingerprint_string(getValue("DisplayName"))
 else:
     return ""
