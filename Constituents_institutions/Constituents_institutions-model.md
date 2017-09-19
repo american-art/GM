@@ -86,7 +86,7 @@ if getValue("Birth Date")!='0':
 From column: _BirthURI_
 ``` python
 if getValue("Birth Date")!=0:
-    return getValue("ConstituentURI")+"/birth_date"
+    return getValue("ConstituentURI")+"/birth_year"
 ```
 
 #### _DeathURI_
@@ -102,7 +102,7 @@ else:
 From column: _DeathURI_
 ``` python
 if getValue("Death Date")!=0:
-    return getValue("ConstituentURI")+"/death_date"
+    return getValue("ConstituentURI")+"/death_year"
 else:
     return ""
 ```
