@@ -8,7 +8,10 @@
 #### _ObjectURI_
 From column: _ObjectID_
 ``` python
-return "object/"+getValue("ObjectID")
+if getValue("TitleType")!="Descriptive Title":
+    return "object/"+getValue("ObjectID")
+else:
+    return ""
 ```
 
 #### _TitleURI_
