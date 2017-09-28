@@ -1,14 +1,6 @@
 # Titles.csv
 
 ## Add Column
-#### _ObjectURI_
-From column: _ObjectID_
-<br/>Value: ``
-
-#### _TitleLabel_
-From column: _Title_
-<br/>Value: ``
-
 
 ## Add Node/Literal
 #### Literal Node: `http://vocab.getty.edu/aat/300404670`
@@ -19,32 +11,31 @@ Literal Type: ``
 
 ## PyTransforms
 #### _ObjectURI_
-From column: _ObjectURI_
+From column: _ObjectID_
 ``` python
 return "object/"+getValue("ObjectID")
 ```
 
-#### _TitleLabel_
-From column: _TitleLabel_
+#### _TitleURI_
+From column: _Title_
 ``` python
-return getValue("Title")
+if getValue("DisplayOrder") == "1":
+    return UM.uri_from_fields(getValue("ObjectURI")+"/title/",getValue("Title"))
+else:
+    return ""
 ```
 
-#### _TitleURI_
-From column: _ObjectURI_
+#### _TitleLabel_
+From column: _Title_
 ``` python
-return UM.uri_from_fields(getValue("ObjectURI")+"/title/",getValue("Title"))
+if getValue("DisplayOrder") == "1":
+    return getValue("Title")
+else:
+    return ""
 ```
 
 
 ## Selections
-#### _DEFAULT_TEST_
-From column: _TitleType_
-<br>Operation: `Union`
-``` python
-return getValue("TitleType")!="Primary Title"
-```
-
 
 ## Semantic Types
 | Column | Property | Class |
