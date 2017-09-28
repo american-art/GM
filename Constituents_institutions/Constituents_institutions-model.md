@@ -60,7 +60,9 @@ else:
 From column: _DisplayDate_
 ``` python
 if getValue("Nationality"):
-    return getValue("ConstituentURI")+"/nationality"
+    return UM.uri_from_fields("thesauri/nationality/", getValue("Nationality"))
+else:
+    return ""
 ```
 
 #### _AlphasortURI_
