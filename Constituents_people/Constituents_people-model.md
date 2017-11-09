@@ -1,4 +1,4 @@
-# Constituents.json
+# Constituents.csv
 
 ## Add Column
 
@@ -300,6 +300,24 @@ From column: _Death Date_
 return getValue("Death Date")+"-12-31"
 ```
 
+#### _AlphaSortLabel_
+From column: _AlphaSort_
+``` python
+return getValue("AlphaSort")
+```
+
+#### _DisplayNameLabel_
+From column: _DisplayName_
+``` python
+return getValue("DisplayName")
+```
+
+#### _NameLabelAppellation_
+From column: _DisplayNameLabel_
+``` python
+return getValue("DisplayName")
+```
+
 
 ## Selections
 
@@ -307,6 +325,7 @@ return getValue("Death Date")+"-12-31"
 | Column | Property | Class |
 |  ----- | -------- | ----- |
 | _AlphaSort_ | `rdf:value` | `crm:E82_Actor_Appellation1`|
+| _AlphaSortLabel_ | `rdfs:label` | `crm:E82_Actor_Appellation1`|
 | _AlphasortURI_ | `uri` | `crm:E82_Actor_Appellation1`|
 | _Biography_ | `rdf:value` | `crm:E33_Linguistic_Object1`|
 | _BiographyURI_ | `uri` | `crm:E33_Linguistic_Object1`|
@@ -322,6 +341,7 @@ return getValue("Death Date")+"-12-31"
 | _DeathURI_ | `uri` | `crm:E64_End_of_Existence1`|
 | _DeathYearURI_ | `uri` | `crm:E52_Time-Span2`|
 | _DisplayName_ | `rdf:value` | `crm:E82_Actor_Appellation2`|
+| _DisplayNameLabel_ | `rdfs:label` | `crm:E82_Actor_Appellation2`|
 | _DisplayNameURI_ | `uri` | `crm:E82_Actor_Appellation2`|
 | _FirstName_ | `rdf:value` | `crm:E82_Actor_Appellation4`|
 | _FirstNameTypeURI_ | `uri` | `crm:E55_Type3`|
@@ -336,6 +356,7 @@ return getValue("Death Date")+"-12-31"
 | _MiddleNameTypeURI_ | `uri` | `crm:E55_Type4`|
 | _MiddleNameURI_ | `uri` | `crm:E82_Actor_Appellation5`|
 | _NameLabel_ | `rdfs:label` | `crm:E39_Actor1`|
+| _NameLabelAppellation_ | `rdfs:label` | `crm:E82_Actor_Appellation3`|
 | _NameURI_ | `uri` | `crm:E82_Actor_Appellation3`|
 | _Nationality_ | `rdfs:label` | `crm:E74_Group1`|
 | _NationalityURI_ | `uri` | `crm:E74_Group1`|
