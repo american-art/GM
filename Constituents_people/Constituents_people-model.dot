@@ -1,7 +1,7 @@
 digraph n0 {
 fontcolor="blue"
 remincross="true"
-label="Constituents.json"
+label="Constituents.csv"
 subgraph cluster {
 label="model"
 n2[style="filled",color="white",fillcolor="lightgray",label="E39_Actor1"];
@@ -27,58 +27,61 @@ n21[style="filled",color="white",fillcolor="lightgray",label="E55_Type4"];
 n22[style="filled",color="white",fillcolor="lightgray",label="E55_Type5"];
 n23[style="filled",color="white",fillcolor="lightgray",label="E55_Type6"];
 n24[style="filled",color="white",fillcolor="lightgray",label="E55_Type7"];
-n25[shape="plaintext",style="filled",fillcolor="gold",label="MiddleNameURI"];
-n26[shape="plaintext",style="filled",fillcolor="gold",label="FirstNameURI"];
-n27[shape="plaintext",style="filled",fillcolor="gold",label="MiddleNameTypeURI"];
-n28[shape="plaintext",style="filled",fillcolor="gold",label="DeathURI"];
-n29[shape="plaintext",style="filled",fillcolor="gold",label="BirthDateEnd"];
-n30[shape="plaintext",style="filled",fillcolor="gold",label="GenderURI"];
-n31[shape="plaintext",style="filled",fillcolor="gold",label="PrefixURI"];
-n32[shape="plaintext",style="filled",fillcolor="gold",label="LastNameURI"];
-n33[shape="plaintext",style="filled",fillcolor="gold",label="NationalityURI"];
-n34[shape="plaintext",style="filled",fillcolor="gold",label="DisplayName"];
-n35[shape="plaintext",style="filled",fillcolor="gold",label="Gender"];
-n36[shape="plaintext",style="filled",fillcolor="gold",label="GenderTypeURI"];
-n37[shape="plaintext",style="filled",fillcolor="gold",label="Death Date"];
-n38[shape="plaintext",style="filled",fillcolor="gold",label="Prefix"];
-n39[shape="plaintext",style="filled",fillcolor="gold",label="DeathYearURI"];
-n40[shape="plaintext",style="filled",fillcolor="gold",label="FirstName"];
-n41[shape="plaintext",style="filled",fillcolor="gold",label="MiddleName"];
-n42[shape="plaintext",style="filled",fillcolor="gold",label="LastNameTypeURI"];
-n43[shape="plaintext",style="filled",fillcolor="gold",label="Nationality"];
+n25[shape="plaintext",style="filled",fillcolor="gold",label="LastName"];
+n26[shape="plaintext",style="filled",fillcolor="gold",label="Suffix"];
+n27[shape="plaintext",style="filled",fillcolor="gold",label="Prefix"];
+n28[shape="plaintext",style="filled",fillcolor="gold",label="Biography"];
+n29[shape="plaintext",style="filled",fillcolor="gold",label="SuffixTypeURI"];
+n30[shape="plaintext",style="filled",fillcolor="gold",label="SuffixURI"];
+n31[shape="plaintext",style="filled",fillcolor="gold",label="Birth Date"];
+n32[shape="plaintext",style="filled",fillcolor="gold",label="Death Date"];
+n33[shape="plaintext",style="filled",fillcolor="gold",label="MiddleNameURI"];
+n34[shape="plaintext",style="filled",fillcolor="gold",label="FirstNameTypeURI"];
+n35[shape="plaintext",style="filled",fillcolor="gold",label="DisplayName"];
+n36[shape="plaintext",style="filled",fillcolor="gold",label="FirstNameURI"];
+n37[shape="plaintext",style="filled",fillcolor="gold",label="FirstName"];
+n38[shape="plaintext",style="filled",fillcolor="gold",label="MiddleName"];
+n39[shape="plaintext",style="filled",fillcolor="gold",label="BirthDateEnd"];
+n40[shape="plaintext",style="filled",fillcolor="gold",label="DeathURI"];
+n41[shape="plaintext",style="filled",fillcolor="gold",label="DeathDateBegin"];
+n42[shape="plaintext",style="filled",fillcolor="gold",label="AlphaSortLabel"];
+n43[shape="plaintext",style="filled",fillcolor="gold",label="NameURI"];
 n44[shape="plaintext",style="filled",fillcolor="gold",label="BirthDateBegin"];
-n45[shape="plaintext",style="filled",fillcolor="gold",label="DeathDateEnd"];
-n46[shape="plaintext",style="filled",fillcolor="gold",label="SuffixURI"];
-n47[shape="plaintext",style="filled",fillcolor="gold",label="LastName"];
-n48[shape="plaintext",style="filled",fillcolor="gold",label="AlphasortURI"];
-n49[shape="plaintext",style="filled",fillcolor="gold",label="PrefixTypeURI"];
-n50[shape="plaintext",style="filled",fillcolor="gold",label="BirthYearURI"];
-n51[shape="plaintext",style="filled",fillcolor="gold",label="SuffixTypeURI"];
-n52[shape="plaintext",style="filled",fillcolor="gold",label="NameLabel"];
-n53[shape="plaintext",style="filled",fillcolor="gold",label="DisplayNameURI"];
-n54[shape="plaintext",style="filled",fillcolor="gold",label="Birth Date"];
-n55[shape="plaintext",style="filled",fillcolor="gold",label="DeathDateBegin"];
-n56[shape="plaintext",style="filled",fillcolor="gold",label="AlphaSort"];
-n57[shape="plaintext",style="filled",fillcolor="gold",label="NameURI"];
-n58[shape="plaintext",style="filled",fillcolor="gold",label="Biography"];
-n59[shape="plaintext",style="filled",fillcolor="gold",label="FirstNameTypeURI"];
-n60[shape="plaintext",style="filled",fillcolor="gold",label="BirthURI"];
-n61[shape="plaintext",style="filled",fillcolor="gold",label="UlanURI"];
-n62[shape="plaintext",style="filled",fillcolor="gold",label="Suffix"];
-n63[shape="plaintext",style="filled",fillcolor="gold",label="ConstituentURI"];
-n64[shape="plaintext",style="filled",fillcolor="gold",label="BiographyURI"];
-n65[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/aat/300404672"];
-n66[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/aat/300080102"];
-n67[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/aat/300404670"];
-n68[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/aat/300404670"];
-n69[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/aat/300379842"];
-n70[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/aat/300404651"];
-n71[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/aat/300404662"];
-n72[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/aat/300404654"];
-n73[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/aat/300404845"];
-n74[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/aat/300404652"];
-n75[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/aat/300055147"];
-n76[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/ulan"];
+n45[shape="plaintext",style="filled",fillcolor="gold",label="ConstituentURI"];
+n46[shape="plaintext",style="filled",fillcolor="gold",label="GenderTypeURI"];
+n47[shape="plaintext",style="filled",fillcolor="gold",label="DeathDateEnd"];
+n48[shape="plaintext",style="filled",fillcolor="gold",label="BiographyURI"];
+n49[shape="plaintext",style="filled",fillcolor="gold",label="Gender"];
+n50[shape="plaintext",style="filled",fillcolor="gold",label="NameLabelAppellation"];
+n51[shape="plaintext",style="filled",fillcolor="gold",label="LastNameURI"];
+n52[shape="plaintext",style="filled",fillcolor="gold",label="UlanURI"];
+n53[shape="plaintext",style="filled",fillcolor="gold",label="Nationality"];
+n54[shape="plaintext",style="filled",fillcolor="gold",label="DisplayNameURI"];
+n55[shape="plaintext",style="filled",fillcolor="gold",label="GenderURI"];
+n56[shape="plaintext",style="filled",fillcolor="gold",label="AlphasortURI"];
+n57[shape="plaintext",style="filled",fillcolor="gold",label="NationalityURI"];
+n58[shape="plaintext",style="filled",fillcolor="gold",label="BirthYearURI"];
+n59[shape="plaintext",style="filled",fillcolor="gold",label="AlphaSort"];
+n60[shape="plaintext",style="filled",fillcolor="gold",label="DisplayNameLabel"];
+n61[shape="plaintext",style="filled",fillcolor="gold",label="LastNameTypeURI"];
+n62[shape="plaintext",style="filled",fillcolor="gold",label="PrefixURI"];
+n63[shape="plaintext",style="filled",fillcolor="gold",label="BirthURI"];
+n64[shape="plaintext",style="filled",fillcolor="gold",label="NameLabel"];
+n65[shape="plaintext",style="filled",fillcolor="gold",label="PrefixTypeURI"];
+n66[shape="plaintext",style="filled",fillcolor="gold",label="DeathYearURI"];
+n67[shape="plaintext",style="filled",fillcolor="gold",label="MiddleNameTypeURI"];
+n68[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/aat/300404672"];
+n69[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/aat/300080102"];
+n70[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/aat/300404670"];
+n71[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/aat/300404670"];
+n72[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/aat/300379842"];
+n73[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/aat/300404651"];
+n74[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/aat/300404662"];
+n75[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/aat/300404654"];
+n76[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/aat/300404845"];
+n77[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/aat/300404652"];
+n78[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/aat/300055147"];
+n79[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/ulan"];
 }
 n2 -> n3[color="brown",fontcolor="black",label="P129i_is_subject_of"]
 n2 -> n4[color="brown",fontcolor="black",label="P2_has_type"]
@@ -102,56 +105,59 @@ n16 -> n21[color="brown",fontcolor="black",label="P2_has_type"]
 n17 -> n22[color="brown",fontcolor="black",label="P2_has_type"]
 n18 -> n23[color="brown",fontcolor="black",label="P2_has_type"]
 n19 -> n24[color="brown",fontcolor="black",label="P2_has_type"]
-n16 -> n25[color="brown",fontcolor="black",label="classLink"]
-n15 -> n26[color="brown",fontcolor="black",label="classLink"]
-n21 -> n27[color="brown",fontcolor="black",label="classLink"]
-n6 -> n28[color="brown",fontcolor="black",label="classLink"]
-n13 -> n29[color="brown",fontcolor="black",label="P82b_end_of_the_end"]
-n4 -> n30[color="brown",fontcolor="black",label="classLink"]
-n19 -> n31[color="brown",fontcolor="black",label="classLink"]
-n17 -> n32[color="brown",fontcolor="black",label="classLink"]
-n7 -> n33[color="brown",fontcolor="black",label="classLink"]
-n9 -> n34[color="brown",fontcolor="black",label="value"]
-n4 -> n35[color="brown",fontcolor="black",label="label"]
-n12 -> n36[color="brown",fontcolor="black",label="classLink"]
-n14 -> n37[color="brown",fontcolor="black",label="label"]
-n19 -> n38[color="brown",fontcolor="black",label="value"]
-n14 -> n39[color="brown",fontcolor="black",label="classLink"]
-n15 -> n40[color="brown",fontcolor="black",label="value"]
-n16 -> n41[color="brown",fontcolor="black",label="value"]
-n22 -> n42[color="brown",fontcolor="black",label="classLink"]
-n7 -> n43[color="brown",fontcolor="black",label="label"]
+n17 -> n25[color="brown",fontcolor="black",label="value"]
+n18 -> n26[color="brown",fontcolor="black",label="value"]
+n19 -> n27[color="brown",fontcolor="black",label="value"]
+n3 -> n28[color="brown",fontcolor="black",label="value"]
+n23 -> n29[color="brown",fontcolor="black",label="classLink"]
+n18 -> n30[color="brown",fontcolor="black",label="classLink"]
+n13 -> n31[color="brown",fontcolor="black",label="label"]
+n14 -> n32[color="brown",fontcolor="black",label="label"]
+n16 -> n33[color="brown",fontcolor="black",label="classLink"]
+n20 -> n34[color="brown",fontcolor="black",label="classLink"]
+n9 -> n35[color="brown",fontcolor="black",label="value"]
+n15 -> n36[color="brown",fontcolor="black",label="classLink"]
+n15 -> n37[color="brown",fontcolor="black",label="value"]
+n16 -> n38[color="brown",fontcolor="black",label="value"]
+n13 -> n39[color="brown",fontcolor="black",label="P82b_end_of_the_end"]
+n6 -> n40[color="brown",fontcolor="black",label="classLink"]
+n14 -> n41[color="brown",fontcolor="black",label="P82a_begin_of_the_begin"]
+n8 -> n42[color="brown",fontcolor="black",label="label"]
+n10 -> n43[color="brown",fontcolor="black",label="classLink"]
 n13 -> n44[color="brown",fontcolor="black",label="P82a_begin_of_the_begin"]
-n14 -> n45[color="brown",fontcolor="black",label="P82b_end_of_the_end"]
-n18 -> n46[color="brown",fontcolor="black",label="classLink"]
-n17 -> n47[color="brown",fontcolor="black",label="value"]
-n8 -> n48[color="brown",fontcolor="black",label="classLink"]
-n24 -> n49[color="brown",fontcolor="black",label="classLink"]
-n13 -> n50[color="brown",fontcolor="black",label="classLink"]
-n23 -> n51[color="brown",fontcolor="black",label="classLink"]
-n2 -> n52[color="brown",fontcolor="black",label="label"]
-n9 -> n53[color="brown",fontcolor="black",label="classLink"]
-n13 -> n54[color="brown",fontcolor="black",label="label"]
-n14 -> n55[color="brown",fontcolor="black",label="P82a_begin_of_the_begin"]
-n8 -> n56[color="brown",fontcolor="black",label="value"]
-n10 -> n57[color="brown",fontcolor="black",label="classLink"]
-n3 -> n58[color="brown",fontcolor="black",label="value"]
-n20 -> n59[color="brown",fontcolor="black",label="classLink"]
-n5 -> n60[color="brown",fontcolor="black",label="classLink"]
-n11 -> n61[color="brown",fontcolor="black",label="classLink"]
-n18 -> n62[color="brown",fontcolor="black",label="value"]
-n2 -> n63[color="brown",fontcolor="black",label="classLink"]
-n3 -> n64[color="brown",fontcolor="black",label="classLink"]
-n8 -> n65[color="brown",fontcolor="black",label="P2_has_type"]
-n3 -> n66[color="brown",fontcolor="black",label="P2_has_type"]
-n9 -> n67[color="brown",fontcolor="black",label="P2_has_type"]
-n3 -> n68[color="brown",fontcolor="black",label="P2_has_type"]
-n7 -> n69[color="brown",fontcolor="black",label="P2_has_type"]
-n20 -> n70[color="brown",fontcolor="black",label="broadMatch"]
-n23 -> n71[color="brown",fontcolor="black",label="broadMatch"]
-n21 -> n72[color="brown",fontcolor="black",label="broadMatch"]
-n24 -> n73[color="brown",fontcolor="black",label="broadMatch"]
-n22 -> n74[color="brown",fontcolor="black",label="broadMatch"]
-n12 -> n75[color="brown",fontcolor="black",label="broadMatch"]
-n11 -> n76[color="brown",fontcolor="black",label="inScheme"]
+n2 -> n45[color="brown",fontcolor="black",label="classLink"]
+n12 -> n46[color="brown",fontcolor="black",label="classLink"]
+n14 -> n47[color="brown",fontcolor="black",label="P82b_end_of_the_end"]
+n3 -> n48[color="brown",fontcolor="black",label="classLink"]
+n4 -> n49[color="brown",fontcolor="black",label="label"]
+n10 -> n50[color="brown",fontcolor="black",label="label"]
+n17 -> n51[color="brown",fontcolor="black",label="classLink"]
+n11 -> n52[color="brown",fontcolor="black",label="classLink"]
+n7 -> n53[color="brown",fontcolor="black",label="label"]
+n9 -> n54[color="brown",fontcolor="black",label="classLink"]
+n4 -> n55[color="brown",fontcolor="black",label="classLink"]
+n8 -> n56[color="brown",fontcolor="black",label="classLink"]
+n7 -> n57[color="brown",fontcolor="black",label="classLink"]
+n13 -> n58[color="brown",fontcolor="black",label="classLink"]
+n8 -> n59[color="brown",fontcolor="black",label="value"]
+n9 -> n60[color="brown",fontcolor="black",label="label"]
+n22 -> n61[color="brown",fontcolor="black",label="classLink"]
+n19 -> n62[color="brown",fontcolor="black",label="classLink"]
+n5 -> n63[color="brown",fontcolor="black",label="classLink"]
+n2 -> n64[color="brown",fontcolor="black",label="label"]
+n24 -> n65[color="brown",fontcolor="black",label="classLink"]
+n14 -> n66[color="brown",fontcolor="black",label="classLink"]
+n21 -> n67[color="brown",fontcolor="black",label="classLink"]
+n8 -> n68[color="brown",fontcolor="black",label="P2_has_type"]
+n3 -> n69[color="brown",fontcolor="black",label="P2_has_type"]
+n9 -> n70[color="brown",fontcolor="black",label="P2_has_type"]
+n3 -> n71[color="brown",fontcolor="black",label="P2_has_type"]
+n7 -> n72[color="brown",fontcolor="black",label="P2_has_type"]
+n20 -> n73[color="brown",fontcolor="black",label="broadMatch"]
+n23 -> n74[color="brown",fontcolor="black",label="broadMatch"]
+n21 -> n75[color="brown",fontcolor="black",label="broadMatch"]
+n24 -> n76[color="brown",fontcolor="black",label="broadMatch"]
+n22 -> n77[color="brown",fontcolor="black",label="broadMatch"]
+n12 -> n78[color="brown",fontcolor="black",label="broadMatch"]
+n11 -> n79[color="brown",fontcolor="black",label="inScheme"]
 }
