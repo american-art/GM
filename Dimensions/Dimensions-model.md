@@ -1,4 +1,4 @@
-# Dimensions.json
+# Dimensions_clean.csv
 
 ## Add Column
 
@@ -19,7 +19,10 @@ return "object/"+getValue("ObjectID")
 #### _DimensionStringURI_
 From column: _Dimensions_
 ``` python
-return getValue("ObjectURI")+"/dimension_string"
+if getValue("Dimensions_clean"):
+    return getValue("ObjectURI")+"/dimension_string"
+else:
+    return ""
 ```
 
 #### _PartURI_
@@ -46,7 +49,10 @@ return "thesauri/dimension_type/"+getValue("DimensionType").lower()
 #### _Dimensions_clean_
 From column: _Dimensions_
 ``` python
-return ' '.join(getValue("Dimensions").split("\n"))
+if getValue("Dimensions"):
+    return ' '.join(getValue("Dimensions").split("\n"))
+else:
+    return ""
 ```
 
 #### _UnitLabel_
