@@ -7,11 +7,11 @@ label="model"
 n2[style="filled",color="white",fillcolor="lightgray",label="E22_Man-Made_Object1"];
 n3[style="filled",color="white",fillcolor="lightgray",label="E57_Material1"];
 n4[shape="plaintext",style="filled",fillcolor="gold",label="Medium"];
-n5[shape="plaintext",style="filled",fillcolor="gold",label="MediumURI"];
-n6[shape="plaintext",style="filled",fillcolor="gold",label="ObjectURI"];
+n5[shape="plaintext",style="filled",fillcolor="gold",label="ObjectURI"];
+n6[shape="plaintext",style="filled",fillcolor="gold",label="MediumURI"];
 }
 n2 -> n3[color="brown",fontcolor="black",label="P45_consists_of"]
 n3 -> n4[color="brown",fontcolor="black",label="prefLabel"]
-n3 -> n5[color="brown",fontcolor="black",label="classLink"]
-n2 -> n6[color="brown",fontcolor="black",label="classLink"]
+n2 -> n5[color="brown",fontcolor="black",label="classLink"]
+n3 -> n6[color="brown",fontcolor="black",label="classLink"]
 }
