@@ -1,28 +1,20 @@
 # Medium.csv
 
 ## Add Column
-#### _MediumURI_
-From column: _ObjectID_
-<br/>Value: ``
-
-#### _ObjectURI_
-From column: _ObjectID_
-<br/>Value: ``
-
 
 ## Add Node/Literal
 
 ## PyTransforms
 #### _ObjectURI_
-From column: _ObjectURI_
+From column: _ObjectID_
 ``` python
 return "object/"+getValue("ObjectID")
 ```
 
 #### _MediumURI_
-From column: _MediumURI_
+From column: _ObjectID_
 ``` python
-return getValue("ObjectURI")+"/medium"
+return UM.uri_from_fields("thesuari/classification/", getValue("Medium"))
 ```
 
 
