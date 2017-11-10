@@ -24,11 +24,11 @@ return "http://vocab.getty.edu/aat/"+getValue("SourceTermID")
 | Column | Property | Class |
 |  ----- | -------- | ----- |
 | _ObjectURI_ | `uri` | `crm:E22_Man-Made_Object1`|
-| _SubjectLabel_ | `uri` | `owl:Thing1`|
-| _Term_ | `rdfs:label` | `owl:Thing1`|
+| _SubjectLabel_ | `uri` | `crm:E1_CRM_Entity1`|
+| _Term_ | `rdfs:label` | `crm:E1_CRM_Entity1`|
 
 
 ## Links
 | From | Property | To |
 |  --- | -------- | ---|
-| `crm:E22_Man-Made_Object1` | `crm:P62_depicts` | `owl:Thing1`|
+| `crm:E22_Man-Made_Object1` | `crm:P62_depicts` | `crm:E1_CRM_Entity1`|
