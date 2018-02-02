@@ -233,7 +233,7 @@ return getValue("Culture").strip().lower().capitalize()
 |  ----- | -------- | ----- |
 | _Copyright_ | `crm:P3_has_note` | `crm:E30_Right1`|
 | _CopyrightURI_ | `uri` | `crm:E30_Right1`|
-| _CreditLine_ | `rdf:value` | `crm:E33_Linguistic_Object2`|
+| _Credit Line_ | `rdf:value` | `crm:E33_Linguistic_Object2`|
 | _CreditURI_ | `uri` | `crm:E33_Linguistic_Object2`|
 | _CultureTypeURI_ | `uri` | `crm:E17_Type_Assignment2`|
 | _CultureURI_ | `uri` | `crm:E55_Type2`|
