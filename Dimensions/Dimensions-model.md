@@ -1,4 +1,4 @@
-# Dimensions_clean.csv
+# Dimensions.json
 
 ## Add Column
 
@@ -16,7 +16,7 @@ From column: _ObjectID_
 return "object/"+getValue("ObjectID")
 ```
 
-#### _DimensionStringURI_
+#### _NIU_
 From column: _Dimensions_
 ``` python
 if getValue("Dimensions_clean"):
@@ -26,7 +26,7 @@ else:
 ```
 
 #### _PartURI_
-From column: _DimensionStringURI_
+From column: _NIU_
 ``` python
 return getValue("ObjectURI")+"/"+getValue("Element").lower()
 ```
@@ -65,6 +65,15 @@ return getValue("UnitLabel")
 From column: _UnitLabel_
 ``` python
 return UM.uri_from_fields("thesauri/dimension_type/")+getValue("UnitLabel").strip()
+```
+
+#### _DimensionStringURI_
+From column: _Dimensions_clean_
+``` python
+if getValue("Dimensions_clean"):
+    return getValue("ObjectURI")+"/dimension_string"
+else:
+    return ""
 ```
 
 
