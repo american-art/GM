@@ -12,11 +12,11 @@ filename = filename[filename.rfind(os.path.sep)+1:]
 # print filename
 # print filedir
 
-fout = open(os.path.join(filedir,filename[:filename.index('.')]+'.json'),'w',encoding="latin-1")
+fout = open(os.path.join(filedir,filename[:filename.index('.')]+'.json'),'w',encoding="utf-8")
 i = 0
 jKeys = []
 
-with open(os.path.join(filedir,filename), 'rU',encoding="latin-1") as fin:
+with open(os.path.join(filedir,filename), 'rU',encoding="utf-8-sig") as fin:
     outCSV=(line for line in csv.reader(fin, dialect='excel'))
     for row in outCSV:
         #print (row)
