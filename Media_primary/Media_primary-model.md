@@ -3,11 +3,6 @@
 ## Add Column
 
 ## Add Node/Literal
-#### Literal Node: `http://vocab.getty.edu/aat/300055547`
-Literal Type: ``
-<br/>Language: ``
-<br/>isUri: `true`
-
 
 ## PyTransforms
 #### _ObjectURI_
